@@ -137,6 +137,7 @@ function nextProfile() {
     document.querySelector('.desc').innerHTML = '';
     document.getElementById('next').innerHTML = 'Next';
     document.getElementById('title').innerHTML = `In At: ${currentProfile.inAt}`;
+
     document.getElementById('profileDisplay').innerHTML = `
     <ul class="list-group">
       <li class="list-group-item">Name: ${currentProfile.name}</li>
@@ -149,7 +150,7 @@ function nextProfile() {
 
     document.getElementById(
       'imageDisplay'
-    ).innerHTML = `<img src="${currentProfile.image}" >`;
+    ).innerHTML = `<img src="${currentProfile.image}" alt="${currentProfile.name}'s image">`;
   } else {
     document.getElementById('profileDisplay').innerHTML = `<h1>This is my dream 11, What's yours? 😏😂</h1>`;
     document.getElementById('imageDisplay').innerHTML = '';
@@ -158,6 +159,6 @@ function nextProfile() {
     
     setTimeout(function () {
       window.location.reload();
-    }, 5000);
+    }, 3500);
   }
 }
